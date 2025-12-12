@@ -1,0 +1,1 @@
+const homeScreenTitle = 'Hello, World!';
