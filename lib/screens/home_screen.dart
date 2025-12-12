@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 32.0),
               Text(
                 'Hello, $userInput!',
-                style: Theme.of(context).textTheme.displaySmall,
+                style: Theme.of(context).textTheme.displayLarge,
               ),
             ],
           ),
