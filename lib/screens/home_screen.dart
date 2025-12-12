@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         },
+        child: Icon(Icons.plus_one),
       ),
     );
   }
