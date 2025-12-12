@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_13/screens/secondary_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../common/strings.dart' as strings;
 
 class HomeScreen extends StatefulWidget {
@@ -35,7 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 32.0),
               Text(
                 'Hello, $userInput!',
-                style: Theme.of(context).textTheme.displayLarge,
+                style: GoogleFonts.aboreto(
+                  textStyle: Theme.of(context).textTheme.displayLarge,
+                ),
               ),
             ],
           ),
