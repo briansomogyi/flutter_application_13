@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../common/strings.dart';
+import 'package:flutter_application_13/screens/secondary_screen.dart';
+import '../common/strings.dart' as strings;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,20 +16,23 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(homeScreenTitle),
+        title: Text(strings.homeScreenTitle),
       ),
       body: Padding(
         padding: const EdgeInsets.all(32.0),
         child: Center(
           child: Column(
+            mainAxisSize: .min,
             children: [
               TextField(
+                textAlign: .center,
                 onChanged: (value) {
                   setState(() {
                     userInput = value;
                   });
                 },
               ),
+              SizedBox(height: 32.0),
               Text(
                 'Hello, $userInput!',
                 style: Theme.of(context).textTheme.displaySmall,
@@ -36,6 +40,16 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const SecondaryScreen(),
+            ),
+          );
+        },
       ),
     );
   }
